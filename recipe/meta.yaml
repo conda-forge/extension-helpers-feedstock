@@ -18,11 +18,11 @@ requirements:
   host:
     - python >=3.6
     - pip
-    - setuptools
-    - setuptools_scm
+    - setuptools >=43.0.0
+    - setuptools_scm >=6.2
   run:
     - python >=3.6
-    - setuptools
+    - setuptools >=40.2
 
 test:
   imports:
