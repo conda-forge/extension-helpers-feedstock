@@ -1,5 +1,5 @@
 {% set name = "extension-helpers" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ca1bfac67c79cf4a7a0c09286ce2a24eec31bf17715818d0726318dd0e5050e6
+  sha256: 49460c78a3f8d1f8cec174479f5e85ad445948ccc416033c5aa3e6ddf2c50229
 
 build:
   noarch: python
@@ -16,13 +16,14 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools >=43.0.0
     - setuptools_scm >=6.2
   run:
-    - python >=3.6
+    - python >=3.7
     - setuptools >=40.2
+    - tomli >=1.0.0
 
 test:
   imports:
