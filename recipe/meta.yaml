@@ -16,13 +16,14 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools >=43.0.0
     - setuptools_scm >=6.2
   run:
-    - python >=3.6
+    - python >=3.7
     - setuptools >=40.2
+    - tomli >=1.0.0
 
 test:
   imports:
