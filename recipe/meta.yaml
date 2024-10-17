@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
     - setuptools >=43.0.0
     - setuptools_scm >=6.2
   run:
-    - python >=3.7
+    - python >=3.8
     - setuptools >=40.2
     - tomli >=1.0.0
 
