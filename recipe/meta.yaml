@@ -6,26 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: e7d9c8f71804edd7ecd05b5d59a5b504f6e24867970abfc12771242eed76ebcc
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools >=43.0.0
     - setuptools_scm >=6.2
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - setuptools >=40.2
     - tomli >=1.0.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - extension_helpers
 
