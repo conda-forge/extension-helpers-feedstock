@@ -1,5 +1,5 @@
 {% set name = "extension-helpers" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 78d04185f196e3e0bc5fd8418ce298b014c46f7ac609f6a8c10bf70e8c978324
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 8cd43cb148c679b7ee7d187745ca3528df3e6952a9b14bb606ec23ee6cedc0a3
 
 build:
   noarch: python
